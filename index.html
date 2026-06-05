@@ -88,6 +88,12 @@
   .split{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:start}
   @media(max-width:840px){.split{grid-template-columns:1fr;gap:24px}}
 
+  /* between-section banner */
+  section.banner{background:var(--stone-soft);border-top:1px solid var(--stone);border-bottom:1px solid var(--stone);padding:62px 0;text-align:center}
+  section.banner .eyebrow-d{color:var(--gu-royal);margin-bottom:14px}
+  .bn-lead{font-family:var(--display);font-weight:400;font-size:clamp(28px,3.6vw,40px);line-height:1.08;letter-spacing:-.01em;color:var(--gu-blue);max-width:22ch;margin:0 auto 16px}
+  .bn-body{font-family:var(--serif);font-size:clamp(18px,2vw,21px);line-height:1.55;color:var(--ink-soft);max-width:60ch;margin:0 auto}
+
   /* three features */
   .three{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border-top:2px solid var(--gu-blue)}
   @media(max-width:760px){.three{grid-template-columns:1fr}}
@@ -210,16 +216,26 @@
         <h2>An instant brand, and doors that open.</h2>
       </div>
       <div>
-        <p class="lead">The Thrive Center is one of several SAMHSA-designated National Centers of Excellence at Georgetown. Behind them: thirty years of research, training, and trusted relationships. Those relationships run from the people setting policy to the staff doing the work — federally and in every state. That credibility, and rare access to the systems, customers, and payers that decide whether a company lives, transfers to every one we build.</p>
-        <p class="lead" style="margin-top:16px">And the timing is right. A few years ago, a lot of good companies simply weren't viable — they'd have needed a team of ten just to learn whether they'd work. Built lean, with AI carrying much of the load, a small team can now prove one without that risk.</p>
+        <p class="lead">The Thrive Center is one of several SAMHSA-designated National Centers of Excellence at Georgetown.</p>
+        <p class="lead" style="margin-top:14px">Behind them: thirty years of research, training, and trusted relationships.</p>
+        <p class="lead" style="margin-top:14px">Those relationships run from the people setting policy to the staff doing the work — federally and in every state.</p>
+        <p class="lead" style="margin-top:14px">That credibility, and rare access to the systems, customers, and payers that decide whether a company lives, transfers to every one we build.</p>
       </div>
     </div>
     <div class="stats">
       <div class="stat"><div class="big"><b>30</b> years</div><div class="lab">of applied research, training &amp; field relationships</div></div>
-      <div class="stat"><div class="big">Multiple</div><div class="lab">SAMHSA-designated National Centers of Excellence</div></div>
+      <div class="stat"><div class="big">X</div><div class="lab">SAMHSA-designated National Centers of Excellence</div></div>
       <div class="stat"><div class="big"><b>$600K+</b></div><div class="lab">Attunify's first-cohort revenue — 267 enrolled, $0 VC raised</div></div>
     </div>
     <p class="proofline">A company just months old, already invited to speak alongside established institutions — that's what Georgetown's name makes possible.</p>
+  </div>
+</section>
+
+<section class="banner">
+  <div class="wrap">
+    <div class="eyebrow-d">Why now</div>
+    <h3 class="bn-lead">The timing is right.</h3>
+    <p class="bn-body">A few years ago, a lot of good companies simply weren't viable — they'd have needed a team of ten just to learn whether they'd work. Built lean, with AI carrying much of the load, a small team can now prove one without that risk.</p>
   </div>
 </section>
 
