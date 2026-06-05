@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thrive Studio — Build the company that matters next</title>
+<meta name="description" content="A venture studio inside Georgetown's Thrive Center. We turn 30 years of children's mental-health expertise into ventures an experienced operator can actually ship." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#f6f2e9;
+    --paper-deep:#efe9db;
+    --ink:#172132;
+    --ink-soft:#3c485b;
+    --ink-faint:#6b7587;
+    --clay:#b14628;
+    --clay-deep:#8f3415;
+    --rule:#d8d0bf;
+    --serif:"Newsreader",Georgia,serif;
+    --display:"Fraunces",Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:19px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+  a{color:inherit}
+  /* texture */
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background-image:radial-gradient(rgba(23,33,50,.025) 1px,transparent 1px);
+    background-size:4px 4px;mix-blend-mode:multiply;opacity:.6;
+  }
+  /* ---------- nav ---------- */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(246,242,233,.86);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{font-family:var(--display);font-weight:600;font-size:21px;letter-spacing:-.01em;display:flex;align-items:center;gap:11px}
+  .brand .mark{width:13px;height:13px;border-radius:50%;background:var(--clay);box-shadow:0 0 0 4px rgba(177,70,40,.16)}
+  .brand small{font-family:var(--serif);font-weight:400;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin-left:2px}
+  nav.links{display:flex;gap:30px;align-items:center;font-size:15px}
+  nav.links a{text-decoration:none;color:var(--ink-soft);transition:color .2s}
+  nav.links a:hover{color:var(--clay)}
+  .nav-cta{font-family:var(--serif);font-size:15px;border:1px solid var(--ink);border-radius:40px;padding:9px 18px;text-decoration:none;transition:all .2s}
+  .nav-cta:hover{background:var(--ink);color:var(--paper)}
+  @media(max-width:860px){nav.links{display:none}}
+  /* ---------- hero ---------- */
+  .hero{position:relative;z-index:1;padding:96px 0 78px;border-bottom:1px solid var(--rule)}
+  .eyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--clay-deep);font-weight:500;margin-bottom:30px}
+  h1.headline{font-family:var(--display);font-weight:340;font-size:clamp(46px,7.4vw,104px);line-height:.98;letter-spacing:-.025em}
+  h1.headline em{font-style:italic;color:var(--clay)}
+  .lede{font-size:clamp(20px,2.3vw,25px);line-height:1.45;color:var(--ink-soft);max-width:680px;margin-top:34px;font-weight:330}
+  .hero-cta{display:flex;gap:18px;align-items:center;margin-top:46px;flex-wrap:wrap}
+  .btn{font-family:var(--serif);font-size:17px;text-decoration:none;border-radius:46px;padding:15px 28px;transition:all .22s;display:inline-flex;align-items:center;gap:9px}
+  .btn-primary{background:var(--ink);color:var(--paper)}
+  .btn-primary:hover{background:var(--clay);transform:translateY(-2px)}
+  .btn-ghost{color:var(--ink);border-bottom:1px solid transparent}
+  .btn-ghost:hover{color:var(--clay)}
+  .btn-ghost .arr{transition:transform .2s}
+  .btn-ghost:hover .arr{transform:translateX(4px)}
+  /* fade-up */
+  .fu{opacity:0;transform:translateY(18px);animation:fu .9s cubic-bezier(.2,.7,.2,1) forwards}
+  @keyframes fu{to{opacity:1;transform:none}}
+  .d1{animation-delay:.05s}.d2{animation-delay:.16s}.d3{animation-delay:.28s}.d4{animation-delay:.4s}.d5{animation-delay:.52s}
+  /* ---------- section frame ---------- */
+  section.band{position:relative;z-index:1;padding:84px 0;border-bottom:1px solid var(--rule)}
+  .kicker{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);font-weight:500;margin-bottom:22px;display:flex;align-items:center;gap:12px}
+  .kicker::before{content:"";width:26px;height:1px;background:var(--clay)}
+  h2.sec{font-family:var(--display);font-weight:360;font-size:clamp(32px,4.3vw,54px);line-height:1.04;letter-spacing:-.02em;max-width:18ch}
+  .sec-body{font-size:20px;color:var(--ink-soft);max-width:62ch;margin-top:24px;line-height:1.6}
+  /* why-now two col */
+  .twocol{display:grid;grid-template-columns:.92fr 1.08fr;gap:64px;align-items:start}
+  @media(max-width:840px){.twocol{grid-template-columns:1fr;gap:30px}}
+  /* what we build cards */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:54px;border-top:1px solid var(--rule)}
+  @media(max-width:840px){.cards{grid-template-columns:1fr}}
+  .card{padding:34px 30px 38px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .card:last-child{border-right:none}
+  .card .num{font-family:var(--display);font-size:15px;color:var(--clay);letter-spacing:.04em}
+  .card h3{font-family:var(--display);font-weight:430;font-size:24px;margin:14px 0 12px;letter-spacing:-.01em;line-height:1.1}
+  .card p{font-size:17px;color:var(--ink-soft);line-height:1.55}
+  /* proof */
+  .proof{background:var(--ink);color:var(--paper);border-bottom:none}
+  .proof .kicker{color:rgba(246,242,233,.55)}
+  .proof .kicker::before{background:#e0843f}
+  .proof h2.sec{color:var(--paper)}
+  .proof .proof-lede{font-size:21px;color:rgba(246,242,233,.82);max-width:60ch;margin-top:26px;line-height:1.6}
+  .proof .proof-lede b{color:#f0b07a;font-weight:500}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:52px;border-top:1px solid rgba(246,242,233,.2)}
+  @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+  .stat{padding:30px 24px 30px 0;border-right:1px solid rgba(246,242,233,.16)}
+  .stat:last-child{border-right:none}
+  .stat .big{font-family:var(--display);font-weight:300;font-size:clamp(38px,5vw,60px);line-height:1;letter-spacing:-.02em}
+  .stat .lab{font-size:14px;color:rgba(246,242,233,.6);margin-top:12px;letter-spacing:.02em}
+  .proof-note{margin-top:34px;font-size:15px;color:rgba(246,242,233,.5);font-style:italic}
+  /* model honesty */
+  .outcomes{display:flex;gap:14px;flex-wrap:wrap;margin-top:42px}
+  .pill{border:1px solid var(--rule);border-radius:44px;padding:12px 24px;font-size:17px;background:var(--paper-deep)}
+  .pill b{color:var(--clay);font-weight:500}
+  .say-no{font-family:var(--display);font-style:italic;font-weight:380;font-size:clamp(24px,3.4vw,38px);line-height:1.18;margin-top:46px;letter-spacing:-.01em;max-width:22ch}
+  .say-no span{color:var(--clay)}
+  /* two doors */
+  .doors{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--rule);margin-top:6px}
+  @media(max-width:760px){.doors{grid-template-columns:1fr}}
+  .door{padding:46px 40px 44px;border-right:1px solid var(--rule);transition:background .25s}
+  .door:last-child{border-right:none}
+  .door:hover{background:var(--paper-deep)}
+  .door .dk{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:18px}
+  .door h3{font-family:var(--display);font-weight:380;font-size:30px;line-height:1.08;letter-spacing:-.02em}
+  .door p{font-size:18px;color:var(--ink-soft);margin-top:16px;line-height:1.55}
+  .door .go{display:inline-flex;gap:8px;align-items:center;margin-top:24px;color:var(--clay);text-decoration:none;font-size:17px}
+  .door .go .arr{transition:transform .2s}
+  .door:hover .go .arr{transform:translateX(5px)}
+  /* closing cta */
+  .closing{text-align:center;padding:104px 0}
+  .closing h2{font-family:var(--display);font-weight:330;font-size:clamp(34px,5vw,62px);line-height:1.02;letter-spacing:-.02em;max-width:16ch;margin:0 auto}
+  .closing h2 em{font-style:italic;color:var(--clay)}
+  .closing .btn{margin-top:40px}
+  /* footer */
+  footer{background:var(--paper-deep);border-top:1px solid var(--rule);padding:54px 0 40px;position:relative;z-index:1}
+  .foot-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
+  .foot-brand{font-family:var(--display);font-size:19px;max-width:34ch}
+  .foot-brand p{font-family:var(--serif);font-size:15px;color:var(--ink-faint);margin-top:10px;line-height:1.5}
+  .foot-cols{display:flex;gap:60px;flex-wrap:wrap}
+  .foot-col h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:14px;font-weight:500}
+  .foot-col a{display:block;text-decoration:none;color:var(--ink-soft);font-size:15px;margin-bottom:9px;transition:color .2s}
+  .foot-col a:hover{color:var(--clay)}
+  .foot-base{margin-top:44px;padding-top:22px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:var(--ink-faint)}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#" style="text-decoration:none" class="brand"><span class="mark"></span>Thrive&nbsp;Studio<small>at Georgetown</small></a>
+    <nav class="links">
+      <a href="#">How It Works</a>
+      <a href="#">Why Thrive</a>
+      <a href="#">Ventures</a>
+      <a href="#">For Operators</a>
+      <a href="#">Submit an Idea</a>
+    </nav>
+    <a href="#" class="nav-cta">Start a conversation</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow fu d1">A venture studio inside Georgetown's Thrive Center</div>
+    <h1 class="headline fu d2">Build the company<br>that matters <em>next.</em></h1>
+    <p class="lede fu d3">We take thirty years of children's mental-health expertise and the weight of Georgetown, and turn it into ventures an experienced operator can actually ship — sustainable, profitable, mission-anchored. No unicorn required.</p>
+    <div class="hero-cta fu d4">
+      <a href="#" class="btn btn-primary">Start a 30-minute conversation</a>
+      <a href="#" class="btn btn-ghost">See how the Studio works <span class="arr">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap twocol">
+    <div>
+      <div class="kicker">Why now</div>
+      <h2 class="sec">The workforce nearly doubled. Outcomes didn't move.</h2>
+    </div>
+    <div>
+      <p class="sec-body">Pediatric mental health may be this generation's defining crisis, and the field keeps losing it — because it treats the problem as individual and clinical when the leverage is workforce and environmental.</p>
+      <p class="sec-body">More clinicians won't close the gap in a generation. The children who need the most help spend almost none of their hours with a clinician. They spend them with the early-childhood educators, home visitors, and caregivers already in the room. That's where every venture we build lives.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="kicker">What we build</div>
+    <h2 class="sec">We build through the system, not against it.</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="num">01</div>
+        <h3>Workforce, not clinicians</h3>
+        <p>The leverage is the people already in the room. Equip the workforce around the child and you reach an order of magnitude more children than any clinical model.</p>
+      </div>
+      <div class="card">
+        <div class="num">02</div>
+        <h3>$3–15M ARR, profitable</h3>
+        <p>Sustainable companies built lean on AI, not moonshots. Roughly 80% survival across the portfolio, modest multiples, capital that recycles into the next venture.</p>
+      </div>
+      <div class="card">
+        <div class="num">03</div>
+        <h3>Validated before it exists</h3>
+        <p>Ideas are brought by clinicians and researchers and developed inside the Studio. We do the desk research, discovery, and prototyping — then pair the right operator to a validated idea.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band proof">
+  <div class="wrap">
+    <div class="kicker">Proof it's real</div>
+    <h2 class="sec">Attunify.</h2>
+    <p class="proof-lede">Our first independent spin-out, launched after a roughly five-month incubation. The founding cohort opened in <b>June 2026</b> — defining the national competency standard for Infant &amp; Early Childhood Mental Health Consultation, the missing tier between teacher training and clinical care.</p>
+    <div class="stats">
+      <div class="stat"><div class="big">267</div><div class="lab">enrolled professionals</div></div>
+      <div class="stat"><div class="big">~$100K</div><div class="lab">first-cohort revenue</div></div>
+      <div class="stat"><div class="big">~5 mo</div><div class="lab">idea to launch</div></div>
+      <div class="stat"><div class="big">$0</div><div class="lab">venture capital raised</div></div>
+    </div>
+    <p class="proof-note">Built on IP licensed from Georgetown's Thrive Center — the SAMHSA-designated National Center of Excellence for IECMHC.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap twocol">
+    <div>
+      <div class="kicker">The model</div>
+      <h2 class="sec">Three outcomes. No default.</h2>
+    </div>
+    <div>
+      <p class="sec-body">Every venture moves through four gated stages toward one of three honest outcomes:</p>
+      <div class="outcomes">
+        <span class="pill"><b>Spin out</b> &nbsp;as an independent company</span>
+        <span class="pill"><b>Spin in</b> &nbsp;as a durable Center program</span>
+        <span class="pill"><b>Shut down</b> &nbsp;with a clean post-mortem</span>
+      </div>
+      <p class="say-no">We say no a lot. <span>That's the point.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="band" style="padding-top:54px">
+  <div class="wrap">
+    <div class="kicker">Two doors</div>
+    <div class="doors">
+      <div class="door">
+        <div class="dk">For operators</div>
+        <h3>You've done the hardest part once.</h3>
+        <p>Do it again inside an institution that de-risks the parts you don't want to repeat. Start with a validated idea, Georgetown's brand, and a path to a profitable company — not a cold deck and a room of skeptical VCs.</p>
+        <a href="#" class="go">For Operators <span class="arr">&rarr;</span></a>
+      </div>
+      <div class="door">
+        <div class="dk">For idea-bringers</div>
+        <h3>You see the problem in the field.</h3>
+        <p>If you're a clinician or researcher carrying a problem worth solving for children, families, and communities, bring it to the Studio. We'll tell you honestly whether it fits — and what happens next.</p>
+        <a href="#" class="go">Submit an Idea <span class="arr">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <h2>The Studio runs on real go/no-go calls. <em>Let's have one.</em></h2>
+    <a href="#" class="btn btn-primary">Start a 30-minute conversation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <span class="brand" style="font-size:20px"><span class="mark"></span>Thrive Studio</span>
+        <p>The venture arm of Georgetown's Thrive Center for Children, Families, and Communities.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>The Studio</h4>
+          <a href="#">How It Works</a>
+          <a href="#">Why Thrive vs. VC</a>
+          <a href="#">Ventures</a>
+          <a href="#">About &amp; Team</a>
+        </div>
+        <div class="foot-col">
+          <h4>Get involved</h4>
+          <a href="#">For Operators</a>
+          <a href="#">Submit an Idea</a>
+          <a href="#">Insights</a>
+          <a href="#">Events</a>
+        </div>
+        <div class="foot-col">
+          <h4>Contact</h4>
+          <a href="#">Get in touch</a>
+          <a href="#">Media &amp; inquiries</a>
+          <a href="#">Partner with us</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 Thrive Studio · Georgetown University</span>
+      <span>Variant A — "The Brief" · editorial / institutional</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

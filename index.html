@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Georgetown University · Thrive Center — Build a company with us</title>
+<meta name="description" content="We turn trusted models, evidence, and expertise from inside Georgetown's Thrive Center into businesses that strengthen the systems serving children and families. Built through the system, not against it." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300..700;1,400..500&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --gu-blue:#041E42;     /* Georgetown Blue · Pantone 282 — primary, dominant */
+    --gu-blue-2:#012169;   /* Pantone 280 */
+    --gu-royal:#003DA5;    /* Pantone 293 — brighter accent */
+    --gu-cyan:#00B5E2;     /* Pantone 306 — bright accent, sparing */
+    --gu-gray:#63666A;     /* Georgetown Gray · Cool Gray 10 */
+    --gu-gray-2:#BBBCBC;
+    --stone:#D6D2C4;       /* Pantone 7527 — warm neutral background */
+    --stone-soft:#efede6;
+    --paper:#ffffff;
+    --ink:#1d2733;
+    --ink-soft:#444b55;
+    --sans:"Jost",-apple-system,Segoe UI,sans-serif;     /* Futura PT substitute */
+    --serif:"Libre Caslon Text",Georgia,serif;            /* Adobe Caslon substitute */
+    --display:"Libre Caslon Display","Libre Caslon Text",Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 40px}
+  a{color:inherit}
+  @media(max-width:640px){.wrap{padding:0 24px}}
+
+  /* ---------- co-brand lockup ---------- */
+  .lockup{display:inline-flex;align-items:center;gap:14px;text-decoration:none;line-height:1}
+  .lockup .gu{font-family:var(--display);font-size:19px;letter-spacing:.005em;white-space:nowrap}
+  .lockup .rule{width:1px;height:26px;background:currentColor;opacity:.5}
+  .lockup .unit{font-family:var(--sans);font-weight:400;font-size:13px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+  @media(max-width:520px){.lockup .gu{font-size:16px}.lockup .rule{height:22px}.lockup .unit{font-size:11px;letter-spacing:.12em}}
+
+  /* ---------- top bar ---------- */
+  header.bar{position:sticky;top:0;z-index:50;background:var(--gu-blue);color:#fff;border-bottom:1px solid rgba(255,255,255,.12)}
+  .bar-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .bar nav{display:flex;align-items:center;gap:30px}
+  .bar nav a{font-family:var(--sans);font-size:14px;letter-spacing:.04em;text-decoration:none;color:rgba(255,255,255,.82);transition:color .2s}
+  .bar nav a:hover{color:var(--gu-cyan)}
+  .bar .cta{font-family:var(--sans);font-size:14px;letter-spacing:.04em;text-decoration:none;border:1px solid rgba(255,255,255,.55);border-radius:2px;padding:9px 18px;color:#fff;transition:all .2s}
+  .bar .cta:hover{background:#fff;color:var(--gu-blue);border-color:#fff}
+  @media(max-width:760px){.bar nav a{display:none}}
+
+  /* ---------- buttons ---------- */
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:16px;letter-spacing:.02em;text-decoration:none;border-radius:2px;padding:15px 28px;transition:all .22s;cursor:pointer;border:1px solid transparent}
+  .btn .arr{transition:transform .2s}.btn:hover .arr{transform:translateX(4px)}
+  .btn-gold{background:#fff;color:var(--gu-blue)}
+  .btn-gold:hover{background:var(--gu-cyan);color:var(--gu-blue)}
+  .btn-blue{background:var(--gu-blue);color:#fff}
+  .btn-blue:hover{background:var(--gu-royal)}
+  .btn-out{border-color:rgba(255,255,255,.5);color:#fff}
+  .btn-out:hover{background:rgba(255,255,255,.1)}
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--gu-blue);color:#fff;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-12%;top:-30%;width:60%;height:160%;background:radial-gradient(closest-side,rgba(0,181,226,.16),transparent 70%);pointer-events:none}
+  .hero-inner{padding:104px 0 92px;position:relative;z-index:1;max-width:920px}
+  .eyebrow{font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gu-cyan);margin-bottom:30px}
+  h1{font-family:var(--display);font-weight:400;font-size:clamp(42px,6.4vw,80px);line-height:1.04;letter-spacing:-.01em}
+  .hero .sub{font-family:var(--serif);font-size:clamp(20px,2.3vw,25px);line-height:1.5;color:rgba(255,255,255,.84);max-width:760px;margin-top:30px}
+  .hero .sub strong{color:#fff;font-weight:700;font-style:italic}
+  .hero-cta{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:42px}
+  .hero-proof{margin-top:48px;padding-top:26px;border-top:1px solid rgba(255,255,255,.16);font-family:var(--sans);font-size:15px;letter-spacing:.02em;color:rgba(255,255,255,.7);max-width:760px}
+  .hero-proof b{color:#fff;font-weight:500}
+
+  /* ---------- sections ---------- */
+  section.s{padding:96px 0}
+  section.stone{background:var(--stone-soft)}
+  section.blue{background:var(--gu-blue);color:#fff}
+  .eyebrow-d{font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gu-royal);margin-bottom:20px}
+  section.blue .eyebrow-d{color:var(--gu-cyan)}
+  h2{font-family:var(--display);font-weight:400;font-size:clamp(30px,4.2vw,52px);line-height:1.08;letter-spacing:-.01em;color:var(--gu-blue);max-width:18ch}
+  section.blue h2{color:#fff}
+  .lead{font-family:var(--serif);font-size:21px;line-height:1.6;color:var(--ink-soft);max-width:60ch;margin-top:24px}
+  section.blue .lead{color:rgba(255,255,255,.84)}
+  .lead strong{color:var(--gu-blue);font-weight:600}
+  section.blue .lead strong{color:#fff;font-weight:700}
+  .split{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:start}
+  @media(max-width:840px){.split{grid-template-columns:1fr;gap:24px}}
+
+  /* three features */
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border-top:2px solid var(--gu-blue)}
+  @media(max-width:760px){.three{grid-template-columns:1fr}}
+  .feat{padding:32px 30px 36px;border-right:1px solid var(--gu-gray-2)}
+  .feat:last-child{border-right:none}
+  .feat .n{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.1em;color:var(--gu-royal)}
+  .feat h3{font-family:var(--display);font-weight:400;font-size:25px;line-height:1.12;color:var(--gu-blue);margin:14px 0 12px}
+  .feat p{font-size:17px;color:var(--ink-soft);line-height:1.55}
+
+  /* proof cards / stats */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:50px;border-top:1px solid rgba(255,255,255,.22)}
+  @media(max-width:680px){.stats{grid-template-columns:1fr}}
+  .stat{padding:30px 26px 30px 0;border-right:1px solid rgba(255,255,255,.16)}
+  .stat:last-child{border-right:none}
+  .stat .big{font-family:var(--display);font-size:clamp(36px,4.6vw,54px);line-height:1;color:#fff}
+  .stat .big b{color:var(--gu-cyan);font-weight:400}
+  .stat .lab{font-family:var(--sans);font-size:14px;letter-spacing:.02em;color:rgba(255,255,255,.66);margin-top:14px;line-height:1.4}
+  .proofline{font-family:var(--sans);font-size:14px;letter-spacing:.02em;color:rgba(255,255,255,.6);margin-top:30px}
+
+  /* audience */
+  .aud{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:54px;border:1px solid var(--gu-gray-2)}
+  @media(max-width:760px){.aud{grid-template-columns:1fr}}
+  .aud .col{padding:40px 36px}
+  .aud .col+.col{border-left:1px solid var(--gu-gray-2)}
+  @media(max-width:760px){.aud .col+.col{border-left:none;border-top:1px solid var(--gu-gray-2)}}
+  .aud .col.lead-col{background:var(--gu-blue);color:#fff}
+  .aud .k{font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gu-royal);margin-bottom:16px}
+  .aud .col.lead-col .k{color:var(--gu-cyan)}
+  .aud h3{font-family:var(--display);font-weight:400;font-size:27px;line-height:1.1;color:var(--gu-blue);margin-bottom:14px}
+  .aud .col.lead-col h3{color:#fff}
+  .aud p{font-size:18px;line-height:1.55;color:var(--ink-soft)}
+  .aud .col.lead-col p{color:rgba(255,255,255,.85)}
+
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:18px}
+  @media(max-width:840px){.contact-grid{grid-template-columns:1fr;gap:34px}}
+  .field{margin-bottom:20px}
+  .field label{display:block;font-family:var(--sans);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:8px}
+  .field input,.field select,.field textarea{width:100%;font-family:var(--serif);font-size:17px;color:#fff;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.28);border-radius:2px;padding:13px 15px}
+  .field textarea{min-height:110px;resize:vertical}
+  .field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.4)}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gu-cyan)}
+  .field select option{color:#041E42}
+  .note{font-family:var(--sans);font-size:13px;color:rgba(255,255,255,.55);margin-top:14px}
+  .stub{font-family:var(--sans);font-size:13px;letter-spacing:.02em;color:var(--gu-cyan);border:1px dashed rgba(0,181,226,.5);border-radius:2px;padding:12px 16px;margin-bottom:24px}
+
+  /* footer */
+  footer{background:#02132c;color:rgba(255,255,255,.7);padding:48px 0 38px}
+  .foot-top{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap}
+  .foot-desc{font-family:var(--serif);font-size:15px;max-width:42ch;margin-top:14px;line-height:1.5;color:rgba(255,255,255,.6)}
+  .foot-links{display:flex;gap:26px;flex-wrap:wrap;font-family:var(--sans);font-size:14px}
+  .foot-links a{color:rgba(255,255,255,.72);text-decoration:none}
+  .foot-links a:hover{color:var(--gu-cyan)}
+  .foot-base{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-family:var(--sans);font-size:12.5px;letter-spacing:.02em;color:rgba(255,255,255,.45);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  .fu{opacity:0;transform:translateY(16px);animation:fu .8s cubic-bezier(.2,.7,.2,1) forwards}
+  @keyframes fu{to{opacity:1;transform:none}}
+  .d1{animation-delay:.05s}.d2{animation-delay:.16s}.d3{animation-delay:.27s}.d4{animation-delay:.38s}
+  @media(prefers-reduced-motion:reduce){.fu{animation:none;opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar-inner">
+    <a href="#top" class="lockup" style="color:#fff">
+      <span class="gu">Georgetown University</span>
+      <span class="rule"></span>
+      <span class="unit">Thrive Center</span>
+    </a>
+    <nav>
+      <a href="#approach">Our approach</a>
+      <a href="#why">Why Georgetown</a>
+      <a href="#build-with">Who we build with</a>
+    </nav>
+    <a href="#contact" class="cta">Get in touch</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="eyebrow fu d1">A venture effort of Georgetown's Thrive Center</div>
+      <h1 class="fu d2">Build a company with Georgetown's Thrive Center.</h1>
+      <p class="sub fu d3">We turn the field's most trusted models, evidence, and expertise into businesses that strengthen the systems serving children and families — built with Georgetown's Thrive Center, <strong>through the system, not against it.</strong></p>
+      <div class="hero-cta fu d4">
+        <a href="#contact" class="btn btn-gold">Start a conversation <span class="arr">&rarr;</span></a>
+        <a href="#approach" class="btn btn-out">How it works</a>
+      </div>
+      <p class="hero-proof fu d4">Our first company, <b>Attunify</b>, went from idea to live in <b>five months</b> — now the national standard for early-childhood mental-health consultation, with <b>267 enrolled</b> in its first cohort, <b>more than $600,000</b> in revenue, and <b>no venture capital</b>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="approach">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="eyebrow-d">Not another venture studio</div>
+        <h2>We don't chase ideas. We build on what the field already trusts.</h2>
+      </div>
+      <div>
+        <p class="lead">Most studios talk about speed and validation. We start from something the field already trusts — a proven model, an evidence base, a recognized name — whether it comes from Georgetown, a partner institution, or your own practice. Then we put the weight of Georgetown behind it.</p>
+        <p class="lead" style="margin-top:16px">And we're not neutral about what we build. The biggest gains for children and families come from <strong>strengthening the people already in the room</strong> — educators, home visitors, caregivers — not more clinicians, and not another app.</p>
+      </div>
+    </div>
+    <div class="three">
+      <div class="feat"><div class="n">01</div><h3>Proven work, not a cold idea</h3><p>A proven model, a strong evidence base, a recognized name — from inside Georgetown or anywhere in the field. The kind of credibility that opens doors on day one.</p></div>
+      <div class="feat"><div class="n">02</div><h3>Through the system, not against it</h3><p>Companies designed to work with the institutions, programs, and funding that serve children and families — where the demand and the trust already are.</p></div>
+      <div class="feat"><div class="n">03</div><h3>Quality over quantity</h3><p>We say no a lot. We're not a factory — a small number of strong companies, each built to last, beats a portfolio of noise.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s blue" id="why">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="eyebrow-d">Why it works</div>
+        <h2>An instant brand, and doors that open.</h2>
+      </div>
+      <div>
+        <p class="lead">The Thrive Center is the SAMHSA-designated National Center of Excellence for early-childhood mental-health consultation, with thirty years of research, training, and relationships behind it. That credibility doesn't have to be earned from scratch — it transfers to every company we build.</p>
+        <p class="lead" style="margin-top:16px">And the timing is right. A few years ago, a lot of good companies simply weren't viable — they'd have needed a team of ten just to learn whether they'd work. Built lean, with AI carrying much of the load, a small team can now prove one without that risk.</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="big"><b>30</b> years</div><div class="lab">of applied research, training &amp; field relationships</div></div>
+      <div class="stat"><div class="big">National</div><div class="lab">SAMHSA-designated Center of Excellence</div></div>
+      <div class="stat"><div class="big"><b>$600K+</b></div><div class="lab">Attunify's first-cohort revenue — 267 enrolled, $0 VC raised</div></div>
+    </div>
+    <p class="proofline">A company just months old, already invited to speak alongside established institutions — that's what Georgetown's name makes possible.</p>
+  </div>
+</section>
+
+<section class="s" id="build-with">
+  <div class="wrap">
+    <div class="eyebrow-d">Who we build with</div>
+    <h2>Two halves of the same company.</h2>
+    <p class="lead">Even the best work only becomes a business when the right operator runs with it. We bring both together.</p>
+    <div class="aud">
+      <div class="col">
+        <div class="k">If it's your work</div>
+        <h3>You've built something the field trusts.</h3>
+        <p>A model, an evidence base, a program, a reputation — at Georgetown, at a partner institution, or in your own practice. You don't need three more years to figure out how to commercialize it. That's what we do, with you.</p>
+      </div>
+      <div class="col lead-col">
+        <div class="k">If you're an operator</div>
+        <h3>You can build the company.</h3>
+        <p>Start with proven work and Georgetown's brand behind you — not a cold deck and a room of skeptical investors. Experienced operators are the hardest half to find, and the most important. If that's you, let's talk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s blue" id="contact">
+  <div class="wrap">
+    <div class="eyebrow-d">Get in touch</div>
+    <h2>Building with Georgetown's Thrive Center starts with a conversation.</h2>
+    <div class="contact-grid">
+      <div>
+        <p class="lead">Whether you've built something worth commercializing, you're an operator who can build, or you want to partner — tell us what brings you, and the right person will follow up.</p>
+      </div>
+      <div>
+        <div class="stub">⚑ Form not wired yet — placeholder pending the contact setup. For now it doesn't send.</div>
+        <form onsubmit="return false;">
+          <div class="field"><label for="who">What brings you</label>
+            <select id="who">
+              <option>I want to commercialize my work</option>
+              <option>I'd like to operate a company</option>
+              <option>Partnership or funding</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field"><label for="name">Name</label><input id="name" type="text" placeholder="Your name" /></div>
+          <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="you@example.com" /></div>
+          <div class="field"><label for="msg">A few words</label><textarea id="msg" placeholder="What's on your mind?"></textarea></div>
+          <button class="btn btn-gold" type="submit">Send <span class="arr">&rarr;</span></button>
+          <p class="note">We build selectively and say no a lot — but every serious note gets a real reply.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a href="#top" class="lockup" style="color:#fff">
+          <span class="gu">Georgetown University</span>
+          <span class="rule"></span>
+          <span class="unit">Thrive Center</span>
+        </a>
+        <p class="foot-desc">The Thrive Center for Children, Families, and Communities builds and launches ventures on the field's most trusted models and expertise.</p>
+      </div>
+      <div class="foot-links">
+        <a href="#approach">Our approach</a>
+        <a href="#why">Why Georgetown</a>
+        <a href="#build-with">Who we build with</a>
+        <a href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 Georgetown University · Thrive Center for Children, Families, and Communities</span>
+      <span>Draft — brand-aligned to the Georgetown visual identity</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
