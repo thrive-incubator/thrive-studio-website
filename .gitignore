@@ -5,3 +5,4 @@
 # Editor / OS noise
 Thumbs.db
 *.swp
+.gstack/
