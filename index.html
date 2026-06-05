@@ -35,9 +35,10 @@
   /* ---------- co-brand lockup ---------- */
   .lockup{display:inline-flex;align-items:center;gap:14px;text-decoration:none;line-height:1}
   .lockup .gu{font-family:var(--display);font-size:19px;letter-spacing:.005em;white-space:nowrap}
+  .lockup .gu-logo{display:block;height:37px;width:auto}
   .lockup .rule{width:1px;height:26px;background:currentColor;opacity:.5}
   .lockup .unit{font-family:var(--sans);font-weight:400;font-size:13px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
-  @media(max-width:520px){.lockup .gu{font-size:16px}.lockup .rule{height:22px}.lockup .unit{font-size:11px;letter-spacing:.12em}}
+  @media(max-width:520px){.lockup .gu{font-size:16px}.lockup .gu-logo{height:30px}.lockup .rule{height:22px}.lockup .unit{font-size:11px;letter-spacing:.12em}}
 
   /* ---------- top bar ---------- */
   header.bar{position:sticky;top:0;z-index:50;background:var(--gu-blue);color:#fff;border-bottom:1px solid rgba(255,255,255,.12)}
@@ -152,7 +153,7 @@
 <header class="bar">
   <div class="wrap bar-inner">
     <a href="#top" class="lockup" style="color:#fff">
-      <span class="gu">Georgetown University</span>
+      <img class="gu-logo" src="assets/georgetown-logo.svg" alt="Georgetown University" width="172" height="37" />
       <span class="rule"></span>
       <span class="unit">Thrive Center</span>
     </a>
