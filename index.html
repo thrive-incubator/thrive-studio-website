@@ -72,7 +72,7 @@
   .eyebrow{font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gu-cyan);margin-bottom:30px}
   h1{font-family:var(--display);font-weight:400;font-size:clamp(42px,6.4vw,80px);line-height:1.04;letter-spacing:-.01em}
   .hero .sub{font-family:var(--serif);font-size:clamp(20px,2.3vw,25px);line-height:1.5;color:rgba(255,255,255,.84);max-width:760px;margin-top:30px}
-  .hero .sub strong{color:#fff;font-weight:700;font-style:italic}
+  .hero .sub strong{color:var(--gu-cyan);font-weight:700;font-style:italic}
   .hero-cta{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:42px}
   .hero-proof{margin-top:48px;padding-top:26px;border-top:1px solid rgba(255,255,255,.16);font-family:var(--sans);font-size:15px;letter-spacing:.02em;color:rgba(255,255,255,.7);max-width:760px}
   .hero-proof b{color:#fff;font-weight:500}
@@ -148,6 +148,10 @@
   .form-status.sending{color:rgba(255,255,255,.7)}
   .form-status.ok{color:var(--gu-cyan)}
   .form-status.err{color:#ff9b9b}
+  .form-success{border:1px solid rgba(0,181,226,.55);background:rgba(0,181,226,.09);border-radius:3px;padding:36px 30px;text-align:center;animation:fu .5s cubic-bezier(.2,.7,.2,1) both}
+  .form-success .fs-icon{width:56px;height:56px;margin:0 auto 18px;border-radius:50%;background:var(--gu-cyan);color:var(--gu-blue);font-size:30px;line-height:56px;font-weight:700}
+  .form-success .fs-title{font-family:var(--display);font-weight:400;font-size:clamp(26px,3vw,32px);color:#fff;margin-bottom:12px}
+  .form-success .fs-msg{font-family:var(--serif);font-size:18px;line-height:1.55;color:rgba(255,255,255,.85);max-width:44ch;margin:0 auto}
   .btn[disabled]{opacity:.6;cursor:default}
 
   /* footer */
@@ -296,6 +300,11 @@
           <p class="note">We build selectively and say no a lot — but every serious note gets a real reply.</p>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
+        <div id="form-success" class="form-success" role="status" aria-live="polite" hidden>
+          <div class="fs-icon" aria-hidden="true">&#10003;</div>
+          <h3 class="fs-title">Your note is in.</h3>
+          <p class="fs-msg">Thanks for reaching out — the right person will follow up with you personally. No need to send again.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -347,8 +356,9 @@
     .then(function(json){
       if(json.success){
         form.reset();
-        status.className = 'form-status ok';
-        status.textContent = 'Thanks — your note is in. The right person will follow up.';
+        form.style.display = 'none';
+        var ok = document.getElementById('form-success');
+        if(ok){ ok.hidden = false; ok.scrollIntoView({behavior:'smooth', block:'center'}); }
       } else {
         status.className = 'form-status err';
         status.textContent = (json.message || 'Something went wrong') + '. You can also email contact@thrive-incubator.com directly.';
