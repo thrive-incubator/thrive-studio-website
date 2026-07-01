@@ -38,6 +38,7 @@
 
   /* ---------- co-brand lockup ---------- */
   .lockup{display:inline-flex;align-items:center;gap:14px;text-decoration:none;line-height:1}
+  .lockup a{display:inline-flex;align-items:center;color:inherit;text-decoration:none}
   .lockup .gu{font-family:var(--display);font-size:19px;letter-spacing:.005em;white-space:nowrap}
   .lockup .gu-logo{display:block;height:37px;width:auto}
   .bar .lockup .unit{font-size:15px;letter-spacing:.18em}
@@ -163,6 +164,8 @@
   .foot-links a{color:rgba(255,255,255,.72);text-decoration:none}
   .foot-links a:hover{color:var(--gu-cyan)}
   .foot-base{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-family:var(--sans);font-size:12.5px;letter-spacing:.02em;color:rgba(255,255,255,.45);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .foot-base a{color:inherit;text-underline-offset:2px;transition:color .2s}
+  .foot-base a:hover{color:var(--gu-cyan)}
 
   .fu{opacity:0;transform:translateY(16px);animation:fu .8s cubic-bezier(.2,.7,.2,1) forwards}
   @keyframes fu{to{opacity:1;transform:none}}
@@ -174,11 +177,13 @@
 
 <header class="bar">
   <div class="wrap bar-inner">
-    <a href="#top" class="lockup" style="color:#fff">
-      <img class="gu-logo" src="assets/georgetown-logo.svg" alt="Georgetown University" width="172" height="37" />
+    <span class="lockup" style="color:#fff">
+      <a href="https://www.georgetown.edu/" target="_blank" rel="noopener" aria-label="Georgetown University">
+        <img class="gu-logo" src="assets/georgetown-logo.svg" alt="Georgetown University" width="172" height="37" />
+      </a>
       <span class="rule"></span>
-      <span class="unit">Thrive Center</span>
-    </a>
+      <a href="https://thrivecenter.georgetown.edu/" target="_blank" rel="noopener" class="unit">Thrive Center</a>
+    </span>
     <nav>
       <a href="#approach">Our approach</a>
       <a href="#why">Why Georgetown</a>
@@ -231,7 +236,7 @@
         <h2>Credibility that transfers.</h2>
       </div>
       <div>
-        <p class="lead">Georgetown’s Thrive Center built the models the field runs on, across children’s mental health, disabilities, and early childhood. Its work has been funded and recognized across the federal government, from Health and Human Services to the Departments of Defense and Education. It developed the national model for early childhood mental health consultation, and it is the federally designated University Center for Excellence in Developmental Disabilities (UCEDD) for the District of Columbia.</p>
+        <p class="lead"><a href="https://thrivecenter.georgetown.edu/" target="_blank" rel="noopener">Georgetown’s Thrive Center</a> built the models the field runs on, across children’s mental health, disabilities, and early childhood. Its work has been funded and recognized across the federal government, from Health and Human Services to the Departments of Defense and Education. It developed the national model for early childhood mental health consultation, and it is the federally designated University Center for Excellence in Developmental Disabilities (UCEDD) for the District of Columbia.</p>
         <p class="lead" style="margin-top:16px">None of that trust and credibility has to be earned from scratch. It transfers to every company we build, and it opens doors other startups work years to access.</p>
       </div>
     </div>
@@ -315,11 +320,13 @@
   <div class="wrap">
     <div class="foot-top">
       <div>
-        <a href="#top" class="lockup" style="color:#fff">
-          <img class="gu-logo" src="assets/georgetown-logo.svg" alt="Georgetown University" width="172" height="37" />
+        <span class="lockup" style="color:#fff">
+          <a href="https://www.georgetown.edu/" target="_blank" rel="noopener" aria-label="Georgetown University">
+            <img class="gu-logo" src="assets/georgetown-logo.svg" alt="Georgetown University" width="172" height="37" />
+          </a>
           <span class="rule"></span>
-          <span class="unit">Thrive Center</span>
-        </a>
+          <a href="https://thrivecenter.georgetown.edu/" target="_blank" rel="noopener" class="unit">Thrive Center</a>
+        </span>
         <p class="foot-desc">The Thrive Center for Children, Families, and Communities builds and launches ventures on the field's most trusted models and expertise.</p>
       </div>
       <div class="foot-links">
@@ -331,7 +338,7 @@
     </div>
     <div class="foot-base">
       <span>© 2026 Georgetown University · Thrive Center for Children, Families, and Communities</span>
-      <span>Draft — brand-aligned to the Georgetown visual identity</span>
+      <span><a href="https://www.georgetown.edu/" target="_blank" rel="noopener">georgetown.edu</a> · <a href="https://thrivecenter.georgetown.edu/" target="_blank" rel="noopener">Thrive Center</a></span>
     </div>
   </div>
 </footer>
